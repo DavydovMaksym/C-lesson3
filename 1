@@ -1,0 +1,30 @@
+namespace C_lesson3
+{
+    internal class Program
+    {
+        static int ProductInRange(int start, int end)
+        {
+            int product = 1;
+
+            for (int i = start; i <= end; i++)
+            {
+                product *= i;
+            }
+
+            return product;
+        }
+
+        static void Main()
+        {
+            Console.Write("Enter the start of the range: ");
+            int a = int.Parse(Console.ReadLine());
+
+            Console.Write("Enter the end of the range: ");
+            int b = int.Parse(Console.ReadLine());
+
+            int result = ProductInRange(a, b);
+
+            Console.WriteLine($"Product of numbers from {a} to {b} = {result}");
+        }
+    }
+}
